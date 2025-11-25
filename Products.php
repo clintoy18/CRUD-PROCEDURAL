@@ -34,8 +34,8 @@ $result = mysqli_query($conn,$sql);
                 <td><?=$row['name'] ?></td>
                 <td><?=$row['price'] ?></td>
                 <td><?=$row['quantity'] ?></td>
-                <th><a href="Delete.php?id=<?=$row['id'] ?>">Delete</a></th>
-
+                <th><a href="deleteProducts.php?id=<?=$row['id'] ?>">Delete</a></th>
+                
             </tr>
           <?php endwhile;?>  
         

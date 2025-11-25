@@ -36,7 +36,11 @@ $result = mysqli_query($conn,$sql);
                 <td><?=$row['foodname'] ?></td>
                 <td><?=$row['drinks'] ?></td>
                 <td><?=$row['dessert'] ?></td>
-                <th><a href="Delete.php?id=<?=$row['id'] ?>">Delete</a></th>
+                <td>
+                    <a href="deleteFoods.php?id=<?=$row['id'] ?>">Delete</a>
+                    <a href="editProducts.php?id=<?=$row['id'] ?>">Edit</a>
+        </td>
+                
 
             </tr>
           <?php endwhile;?>  

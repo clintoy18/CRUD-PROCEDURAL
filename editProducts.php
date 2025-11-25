@@ -1,7 +1,10 @@
-<?php
+<!-- <?php
 include "Database.php";
 
-
+$id = $_GET['id'];
+$sql = "SELECT * FROM products WHERE id = $id";
+$result = mysqli_query($conn,$sql);
+$product= mysqli_fetch_assoc($result);
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     $foodname = $_POST['foodname'];
     $drinks = $_POST['drinks'];
@@ -30,16 +33,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <a href="Food.php">Back to foods</a>
     <form action="" method="post">
         <label for="foodname">Food name</label>
-        <input type="text" name="foodname" placeholder="Enter food name" required><br>
+        <input type="text" value="<?php echo $product['foodname'] ?>" name="foodname" placeholder="Enter food name" required>
 
         <label for="drinks">drinks</label>
-        <input type="text" name="drinks" placeholder="Enter food drinks" required><br>
+        <input type="text" name="drinks" placeholder="Enter food drinks" required>
 
         <label for="dessert">dessert</label>
-        <input type="text" name="dessert" placeholder="Enter food dessert" required><br>
+        <input type="text" name="dessert" placeholder="Enter food dessert" required>
 
         <button type="submit">Add</button>
     </form>
     
 </body>
-</html>
+</html> -->
